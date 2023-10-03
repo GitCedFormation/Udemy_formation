@@ -1,7 +1,6 @@
 ---
 - name: "ced Apache installation using contener docker"
   hosts: prod
-  
   pre_tasks:
     - name: "ced Installation des packages linux"
       package: name='{{ item }}' state=present
