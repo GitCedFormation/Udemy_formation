@@ -10,15 +10,15 @@
         - epel-release
         - wget
         - git
-	 	
+
     - name: "ced Download python package"
       get_url:
         url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
         dest: /tmp/get-pip.py
-		
+
     - name: "ced Installation package python"
       command: python2.7 /tmp/get-pip.py
-	  
+
     - name: "ced install docker python"
       pip: name=docker-py
   
@@ -27,7 +27,7 @@
       template:
         src: index.html.j2
         dest: /home/admin/index.html
-	 
+
     - name: "ced Create Apache container"
       docker_container:
         name: webapp
